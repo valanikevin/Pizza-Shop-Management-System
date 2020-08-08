@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="PizzaShopFinalProject.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaShopFinalProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded" d:DesignHeight="873.946" d:DesignWidth="1492.167">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="196*"/>
+            <RowDefinition Height="1877*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="1153*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="464*"/>
+                <RowDefinition Height="327*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Background="#FF0183FF">
+                <Border x:Name="borderBtnHome" BorderThickness="0" BorderBrush="Blue" CornerRadius="10"  Height="70"  Margin="0,10,10,0" HorizontalAlignment="Right" Width="134">
+                    <Button x:Name="btnHome" Content="HOME" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Stretch" Width="{Binding borderBtnAdd.Width}" Height="70" Click="btnHome_Click"/>
+                </Border>
+
+                <Border x:Name="borderBtnAccount" BorderThickness="0" BorderBrush="Blue" CornerRadius="10"  Height="70"  Margin="0,10,10,0" HorizontalAlignment="Right" Width="134">
+                    <Button x:Name="btnAccount" Content="ACCOUNT" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Stretch" Width="{Binding borderBtnAdd.Width}" Height="70" Click="btnAccount_Click"/>
+                </Border>
+
+                <Border x:Name="borderBtnAbout" BorderThickness="0" BorderBrush="Blue" CornerRadius="10"  Height="70"  Margin="0,10,10,0" HorizontalAlignment="Right" Width="134">
+                    <Button x:Name="btnAbout" Content="ABOUT" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Stretch" Width="{Binding borderBtnAdd.Width}" Height="70" Click="btnAbout_Click"/>
+                </Border>
+
+                <Border x:Name="borderBtnFeedback" BorderThickness="0" BorderBrush="Blue" CornerRadius="10"  Height="70"  Margin="0,10,10,0" HorizontalAlignment="Right" Width="134">
+                    <Button x:Name="btnFeedback" Content="FEEDBACK" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Stretch" Width="{Binding borderBtnAdd.Width}" Height="70" Click="btnFeedback_Click"/>
+                </Border>
+                
+
+            </StackPanel>
+            <StackPanel Grid.Row="1" Background="#0183ff">
+                <Border x:Name="borderBtnAdmin" BorderThickness="0" BorderBrush="Yellow" CornerRadius="10"  Height="70"  Margin="0,10,10,0" HorizontalAlignment="Right" Width="134">
+                    <Button x:Name="btnAdmin" Content="ADMIN"  FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Stretch" Width="{Binding borderBtnAdd.Width}" Height="60" Visibility="Visible" Background="#FF060806" Click="btnAdmin_Click"/>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <StackPanel>
+            <StackPanel.Background>
+                <AcrylicBrush TintColor="#FF0183FF"/>
+            </StackPanel.Background>
+            <Image HorizontalAlignment="Stretch" Margin="13"  Source="/Assets/LogoPizza.png" Height="67">
+                <Image.FocusVisualPrimaryBrush>
+                    <AcrylicBrush TintColor="#CCDE2D2D"/>
+                </Image.FocusVisualPrimaryBrush>
+            </Image>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="40 0 0 0" VerticalAlignment="Center">
+            <TextBlock x:Name="pgTitle" Text="Home" FontSize="50" TextWrapping="Wrap" FontWeight="Medium"/>
+            <Border x:Name="borderDemo" BorderThickness="0" BorderBrush="Blue" CornerRadius="10"  Height="50"  Margin="50,0,10,0" HorizontalAlignment="Right" Width="134">
+                <Button x:Name="btnCart" Content="VIEW CART" FontSize="22" FontWeight="Medium" Foreground="White" HorizontalAlignment="Stretch" Width="{Binding borderBtnAdd.Width}" Height="50" Click="btnCart_Click"/>
+            </Border>
+        </StackPanel>
+        <Frame x:Name="mainFrame" Grid.Column="1" Grid.Row="1"/>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+            <TextBlock x:Name="txUsName" Text="Hello" FontSize="20" FontWeight="Medium" Margin="0 0 110 0"></TextBlock>
+        </StackPanel>
+
+    </Grid>
+</Page>

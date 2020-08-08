@@ -1,0 +1,9 @@
+{
+  "ConnectionStrings": {
+    "PizzaShop": "Server=(LocalDB)\\MSSQLLocalDB;AttachFilename = C:\\Users\\valan\\source\\repos\\IntroToDBPrograming\\IntroToDBPrograming\\AppData;Trusted_Connection = Yes;",
+    "NorthwindLocalDB": "Server = (LocalDB)\\MSSQLLocalDB; Database = PizzaShopFinal; Trusted_Connection = Yes",
+    "PizzaShopDB": "Server=.; Database=PizzaShopFinal; Trusted_Connection = Yes;",
+    "NorthwindSqlServer": "Server = .; Database = Northwind; Trusted_Connection = Yes;"
+  }
+
+}

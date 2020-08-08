@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="PizzaShopFinalProject.Cart"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaShopFinalProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded" d:DesignHeight="747.082">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="177*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="73*"/>
+            
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock x:Name="txOrderPreview1" Text="Order Preview" HorizontalAlignment="Left" FontSize="25" FontWeight="Bold"  Margin="20" TextWrapping="Wrap"/>
+            <ScrollViewer Height="550"  HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" DataContext="{Binding SelectedItem, ElementName=lstItems}">
+                <TextBlock x:Name="txOrderPreview" Text="Order Preview" FontSize="20" Margin="20" TextWrapping="Wrap"/>
+            </ScrollViewer>
+
+        </StackPanel>
+        <StackPanel Grid.Column="1" VerticalAlignment="Bottom">
+            
+            <Border x:Name="brResult"  Background="LightYellow" BorderThickness="0" CornerRadius="10"  Height="200"  Margin="10 0 10 20" HorizontalAlignment="Center" Width="Auto">
+                <TextBlock x:Name="txResult" Text="Payemnt Status: Not Paid." HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="15"></TextBlock>
+            </Border>
+            <Border x:Name="borderBtnAccount3"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="70"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="Auto">
+                <TextBlock x:Name="txCount" Margin="10" Text="TOTAL ITEMS: 20" FontSize="20" FontWeight="Medium" Padding="10" HorizontalAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            </Border>
+            <Border x:Name="borderBtnAccount31"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="70"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="Auto">
+                <TextBlock x:Name="txSub" Margin="10" Text="Sub-Total: $20" FontSize="20" FontWeight="Medium" Padding="10" HorizontalAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            </Border>
+            <Border x:Name="borderBtnAccount32"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="70"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="Auto">
+                <TextBlock x:Name="txDisc" Margin="10" Text="Discount (20%): $10" FontSize="20" FontWeight="Medium" Padding="10" HorizontalAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            </Border>
+            <Border x:Name="borderBtnAccount5"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="70"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="Auto">
+                <TextBlock x:Name="txTotal" Margin="10" Text="TOTAL: $43.0" FontSize="20" FontWeight="Medium" Padding="10" HorizontalAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            </Border>
+            <Border x:Name="borderBtnCart"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="50"  Margin="10 0 10 20" HorizontalAlignment="Center" Width="Auto">
+                <Button x:Name="btnPay" Content="PAY BY DEBIT" IsEnabled="True" FontWeight="Medium" Width="Auto" FontSize="20" Padding="10" Background="LightGray" BorderBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" BorderThickness="0,0,0,0" Click="btnPay_Click"/>
+            </Border>
+            <Border x:Name="borderBtnCart1"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="50"  Margin="10 0 10 20" HorizontalAlignment="Center" Width="Auto">
+                <Button x:Name="btnEmptyCart" Content="EMPTY CART" FontWeight="Medium" Width="Auto" FontSize="20" Padding="10" Background="LightGray" BorderBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" BorderThickness="0,0,0,0" Click="btnEmptyCart_Click"/>
+            </Border>
+        </StackPanel>
+        <StackPanel Grid.Column="2" VerticalAlignment="Bottom">
+            <Border  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="70"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="Auto">
+                <TextBlock x:Name="txDisdc" Margin="10" Text="Receipts Will Be Sent To:" FontSize="15" FontWeight="Medium" Padding="10" HorizontalAlignment="Center" TextWrapping="Wrap"></TextBlock>
+            </Border>
+            <Border  Background="LightYellow" BorderThickness="0" CornerRadius="10"  Height="70"   Margin="20 20 20 50" HorizontalAlignment="Center" Width="212">
+                <TextBox x:Name="txEmail" Text="demo@demo.com" FontSize="14" HorizontalAlignment="Center" BorderThickness="2" VerticalAlignment="Center"></TextBox>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Page>

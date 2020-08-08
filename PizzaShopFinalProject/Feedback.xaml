@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="PizzaShopFinalProject.Feedback"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PizzaShopFinalProject"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="20" Text="Please Provide Your Feedback Below" TextWrapping="Wrap"/>
+            <Border Width="524"   Background="LightYellow" BorderThickness="0" CornerRadius="10"  Margin="10 50 10 10" HorizontalAlignment="Center">
+                <TextBox x:Name="txFeedback" HorizontalAlignment="Center" Height="120" PlaceholderText="Enter Your Feedback Here." Padding="10" FontSize="14" BorderThickness="0" AcceptsReturn="True" Width="524"></TextBox>
+            </Border>
+
+            <Border x:Name="borderBtnCart4"  Background="LightYellow" BorderThickness="0" CornerRadius="10"  Height="50"  Margin="10 0 10 20" HorizontalAlignment="Center" Width="524">
+                <Button x:Name="btnSubmit" Content="SEND FEEDBACK" Height="50" FontWeight="Medium" Width="524" FontSize="16" Padding="10" Background="LightGray" BorderBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" BorderThickness="0,0,0,0" Click="btnSubmit_Click"/>
+            </Border>
+            <TextBlock x:Name="txResult" Text="" HorizontalAlignment="Center" FontSize="16"></TextBlock>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
