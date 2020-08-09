@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
@@ -31,9 +32,45 @@ namespace PizzaShopFinalProject
         }
 
         List<User> users = new List<User>();
+        User user = new User();
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            bool isAllowed = true;
+            var localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            Object value = localSettings.Values["curUser"];
+            try
+            {
+                if (value != null)
+                {
 
+                    if (user.uType!=null)
+                    {
+                        if (!(user.uType.Equals("Admin")))
+                        {
+                            isAllowed = false;
+                            return;
+                        }
+                    }
+                }
+                else
+                {
+                    isAllowed = false;
+                    return;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return;
+            }
+
+            if (isAllowed==false)
+            {
+                panelFeedback.Visibility = Visibility.Collapsed;
+                panelUsers.Visibility = Visibility.Collapsed;
+                panelOrders.Visibility = Visibility.Collapsed;
+            }
             try
             {
                 string query = "Select * FROM USERS;";

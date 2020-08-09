@@ -28,6 +28,7 @@ namespace PizzaShopFinalProject
             this.InitializeComponent();
         }
 
+        User ReList = new User();
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             mainFrame.Content = new HomePage();
@@ -38,7 +39,7 @@ namespace PizzaShopFinalProject
             {
                 if (value != null)
                 {
-                    User ReList = JsonConvert.DeserializeObject<User>(value.ToString());
+                    ReList = JsonConvert.DeserializeObject<User>(value.ToString());
                     txUsName.Text = "Hello " + ReList.uFirst;
                     if (ReList.uType.Equals("Admin"))
                     {
@@ -88,6 +89,7 @@ namespace PizzaShopFinalProject
                 else
                 {
                     txUsName.Text = "Hello, Friend. Become Member To Get 10% Off.";
+                    btnAdmin.Visibility = Visibility.Collapsed;
                 }
 
                
@@ -95,6 +97,7 @@ namespace PizzaShopFinalProject
             catch (Exception ex)
             {
                 txUsName.Text = "Hello, Friend. Become Member To Get 10% Off.";
+                btnAdmin.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -113,8 +116,24 @@ namespace PizzaShopFinalProject
 
         private void btnAdmin_Click(object sender, RoutedEventArgs e)
         {
-            pgTitle.Text = "Admin";
-            mainFrame.Content = new AdminArea();
+
+            if (ReList!=null)
+            {
+                if (ReList.uType.Equals("Admin"))
+                {
+                    pgTitle.Text = "Admin";
+                    mainFrame.Content = new AdminArea();
+                }
+                else
+                {
+                    mainFrame.Content = new HomePage();
+                }
+            }
+            else
+            {
+                mainFrame.Content = new HomePage();
+            }
+            
         }
 
         private void btnFeedback_Click(object sender, RoutedEventArgs e)

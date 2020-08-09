@@ -17,17 +17,17 @@
         <StackPanel HorizontalAlignment="Center" Margin="20">
             <TextBlock Text="Login" FontSize="25" Margin="0 50 0 0" FontWeight="Bold"></TextBlock>
 
-            <Border x:Name="borderBtnAccount34"  Background="AliceBlue" BorderThickness="0"  CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Right" Width="424">
-                <TextBox x:Name="txAcID" Text="DarioUser" FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="#FFFFB900"></TextBox>
+            <Border x:Name="borderBtnAccount34"  Background="AliceBlue" BorderThickness="0"  CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="424">
+                <TextBox x:Name="txAcID" Text="" PlaceholderText="Enter User ID/Email Here" Width="340" FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" HorizontalAlignment="Center" SelectionHighlightColor="#FFFFB900"></TextBox>
             </Border>
-            <Border x:Name="borderBtnAccount341"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Right" Width="424">
-                <PasswordBox x:Name="txAcPass" Password="12345"  FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="{x:Null}"></PasswordBox>
+            <Border x:Name="borderBtnAccount341"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="424">
+                <PasswordBox x:Name="txAcPass" PlaceholderText="Enter Password Here" Width="340" HorizontalContentAlignment="Center" Password="" HorizontalAlignment="Center"  FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="{x:Null}"></PasswordBox>
             </Border>
 
-            <Border x:Name="borderBtnAccount35"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 20 10 10" HorizontalAlignment="Right" Width="424">
+            <Border x:Name="borderBtnAccount35"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 20 10 10" HorizontalAlignment="Center" Width="424">
                 <Button x:Name="btnAcLogin" Content="Login" FontWeight="Medium" Width="434" Height="50" FontSize="20"  Background="LightGray" BorderBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" BorderThickness="0,0,0,0" Click="btnAcLogin_Click"/>
             </Border>
-            <Border x:Name="borderBtnAccount351"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 20 10 10" HorizontalAlignment="Right" Width="424">
+            <Border x:Name="borderBtnAccount351"  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 20 10 10" HorizontalAlignment="Center" Width="424">
                 <Button x:Name="btnAcLogOut" Content="Log Out" IsEnabled="False" FontWeight="Medium" Width="434" Height="50" FontSize="20"  Background="LightGray" BorderBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" BorderThickness="0,0,0,0" Click="btnAcLogOut_Click"/>
             </Border>
             <TextBlock x:Name="txResult" Text="" FontSize="20" FontWeight="Bold" Margin="20 100 20 20" Padding="10"/>
@@ -35,25 +35,25 @@
         <StackPanel x:Name="panelRegister" Grid.Column="1" Margin="20">
             <TextBlock x:Name="txRegister" Text="Register" FontSize="25" Margin="0 50 0 0" FontWeight="Bold"></TextBlock>
 
-            <Border   Background="AliceBlue" BorderThickness="0"  CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Right" Width="424">
-                <TextBox x:Name="txRegFirst" FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="#FFFFB900" PlaceholderText="Enter First Name"></TextBox>
+            <Border   Background="AliceBlue" BorderThickness="0"   CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="424">
+                <TextBox x:Name="txRegFirst" Width="340" FontSize="15" HorizontalAlignment="Center" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="#FFFFB900" PlaceholderText="Enter First Name"></TextBox>
             </Border>
 
-            <Border   Background="AliceBlue" BorderThickness="0"  CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Right" Width="424">
-                <TextBox x:Name="txRegLast" FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="#FFFFB900" PlaceholderText="Enter Last Name"></TextBox>
+            <Border   Background="AliceBlue" BorderThickness="0"  CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="424">
+                <TextBox x:Name="txRegLast" Width="340" FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="#FFFFB900" PlaceholderText="Enter Last Name"></TextBox>
             </Border>
 
-            <Border   Background="AliceBlue" BorderThickness="0"  CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Right" Width="424">
-                <TextBox x:Name="txRegEmail" FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="#FFFFB900" PlaceholderText="Enter Email"></TextBox>
+            <Border   Background="AliceBlue" BorderThickness="0"  CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="424">
+                <TextBox x:Name="txRegEmail" Width="340" FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="#FFFFB900" PlaceholderText="Enter Email"></TextBox>
             </Border>
-            <Border  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Right" Width="424">
-                <PasswordBox x:Name="txRegPass1"  FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="{x:Null}" PlaceholderText="Enter Password Here"></PasswordBox>
+            <Border  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="424">
+                <PasswordBox x:Name="txRegPass1" Width="340"  FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="{x:Null}" PlaceholderText="Enter Password Here"></PasswordBox>
             </Border>
-            <Border  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Right" Width="424">
-                <PasswordBox x:Name="txRegPass2"  FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="{x:Null}" PlaceholderText="Confirm Password Here"></PasswordBox>
+            <Border  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 10 10 10" HorizontalAlignment="Center" Width="424">
+                <PasswordBox x:Name="txRegPass2" Width="340"  FontSize="15" BorderBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" SelectionHighlightColor="{x:Null}" PlaceholderText="Confirm Password Here"></PasswordBox>
             </Border>
 
-            <Border  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 20 10 10" HorizontalAlignment="Right" Width="424">
+            <Border  Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Height="40"  Margin="10 20 10 10" HorizontalAlignment="Center" Width="424">
                 <Button x:Name="btnAcReg" Content="Register" FontWeight="Medium" Width="434" Height="50" FontSize="20"  Background="LightGray" BorderBrush="{x:Null}" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" BorderThickness="0,0,0,0" Click="btnAcReg_Click"/>
             </Border>
 

@@ -14,7 +14,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel>
+        <StackPanel x:Name="panelUsers">
             <Border Width="424"   Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Margin="10 10 10 10" HorizontalAlignment="Center">
                 <TextBlock Margin="10" Text="USERS" FontSize="17" FontWeight="Bold" Padding="10" HorizontalAlignment="Center" TextWrapping="Wrap"></TextBlock>
             </Border>
@@ -39,7 +39,7 @@
             </Border>
             <TextBlock x:Name="txResult"  Margin="20" FontSize="16" FontWeight="Bold"></TextBlock>
         </StackPanel>
-        <StackPanel Grid.Column="1">
+        <StackPanel x:Name="panelOrders" Grid.Column="1">
             <Border  Width="424"   Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Margin="10 10 10 10" HorizontalAlignment="Center">
                 <TextBlock Margin="10" Text="ORDERS" FontSize="17" FontWeight="Bold" Padding="10" HorizontalAlignment="Center" TextWrapping="Wrap"></TextBlock>
             </Border>
@@ -47,7 +47,7 @@
                 <TextBlock x:Name="txOrders"  Padding="10" Foreground="Black" TextAlignment="Center" FontSize="16" TextWrapping="Wrap"><Run Text="Orders"/></TextBlock>
             </ScrollViewer>
         </StackPanel>
-        <StackPanel Grid.Column="2">
+        <StackPanel x:Name="panelFeedback" Grid.Column="2">
             <Border Width="424"   Background="AliceBlue" BorderThickness="0" CornerRadius="10"  Margin="10 10 10 10" HorizontalAlignment="Center">
                 <TextBlock Margin="10" Text="FEEDBACK" FontSize="17" FontWeight="Bold" Padding="10" HorizontalAlignment="Center" TextWrapping="Wrap"></TextBlock>
             </Border>
